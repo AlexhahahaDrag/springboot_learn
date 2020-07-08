@@ -1,9 +1,24 @@
-# Getting Started
-
-### Reference Documentation
-For further reference, please consider the following sections:
-
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/maven-plugin/reference/html/#build-image)
-
+整合swagger2.10.5和之前的版本不同，spring5引用WebFlux框架，异步非阻塞式web框架
+WebFlux 并不能使接口的响应时间缩短，它仅仅能够提升吞吐量和伸缩性。
+由@EnableSwagger2变成@EnableSwagger2WebMvc,@EnableSwagger2WebFlux
+依赖有之前的两个变成现在的三个
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.10.5</version>
+</dependency>
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>2.10.5</version>
+</dependency>
+<!--     <dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-spring-webflux</artifactId>
+    <version>2.10.5</version>
+</dependency>-->
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-spring-webmvc</artifactId>
+    <version>2.10.5</version>
+</dependency>
