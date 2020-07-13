@@ -1,0 +1,16 @@
+spring:
+  redis:
+    cluster:
+      nodes: 192.168.64.169:11111,192.168.64.169:11222,192.168.64.169:11333,192.168.64.169:11444,192.168.64.169:11555,192.168.64.169:11666,192.168.64.169:11777,192.168.64.169:11888
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 2
+        max-wait: -1ms
+      shutdown-timeout: 200ms
+server:
+  port: 30041
+
+logging:
+  config: classpath:logging-config.xml
